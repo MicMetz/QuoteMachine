@@ -42,6 +42,7 @@ function getQuote() {
 function tweetQuote() {
     const quote = quotecontainer.innerHTML;
     const tweetUrl = `https://twitter.com/intent/tweet?text=${quote}`;  // twitter api intent function
+    // If logged in, open new tab with tweet
     window.open(tweetUrl, '_blank');        // open in new tab
 }
 
