@@ -17,6 +17,11 @@ tweetButton.addEventListener('click', function (event) {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    getQuote()
+});
+
+
 function getQuote() {
     const config = {
         method: 'get',
@@ -29,7 +34,7 @@ function getQuote() {
         })
         .catch(function (error) {
             console.log(error);
-            quotecontainer.innerHTML = 'Error';
+            quotecontainer.innerHTML =  'Sorry, there was an error. Please refresh the page and try again.';
         });
 }
 
